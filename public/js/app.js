@@ -2,35 +2,37 @@ $(document).ready(function() {
   const ROOT_URL = 'http://jsonplaceholder.typicode.com';
 
   const createArticle = article => {
-    //   <div class="post-preview" data-article-id="">
-    //     <a href="#">
-    //       <h2 class="post-title"></h2>
-    //       <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
-    //     </a>
-    //     <p class="post-meta">
-    //       Posted by <a href="#">Start Bootstrap</a> on September 24, 2014
-    // </p>
-    //   </div>
-    //     <hr />
-    const $div = $('<div>')
-      .addClass('post-preview')
-      .attr('data-article-id', article.id);
-    const $link = $('<a>').attr('href', '#');
-    $('<h2>')
-      .addClass('post-title')
-      .text(article.title)
-      .appendTo($link);
-    $('<h3>')
-      .addClass('post-subtitle')
-      .text('Problems look mighty small from 150 miles up')
-      .appendTo($link);
+    return `<div class="post-preview" data-article-id="${article.id}">
+        <a href="#">
+          <h2 class="post-title">${article.title}</h2>
+          <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
+        </a>
+        <p>${article.body}</p>
+        <p class="post-meta">
+          Posted by <a href="#">Start Bootstrap</a> on September 24, 2014
+    </p>
+      </div>
+        <hr />`;
 
-    $div.append($link);
-    $('<p>')
-      .addClass('post-meta')
-      .html('Posted by <a href="#">Start Bootstrap</a> on January 22, 2019')
-      .appendTo($div);
-    $('<hr>').appendTo($div);
+    // const $div = $('<div>')
+    //   .addClass('post-preview')
+    //   .attr('data-article-id', article.id);
+    // const $link = $('<a>').attr('href', '#');
+    // $('<h2>')
+    //   .addClass('post-title')
+    //   .text(article.title)
+    //   .appendTo($link);
+    // $('<h3>')
+    //   .addClass('post-subtitle')
+    //   .text('Problems look mighty small from 150 miles up')
+    //   .appendTo($link);
+
+    // $div.append($link);
+    // $('<p>')
+    //   .addClass('post-meta')
+    //   .html('Posted by <a href="#">Start Bootstrap</a> on January 22, 2019')
+    //   .appendTo($div);
+    // $('<hr>').appendTo($div);
 
     return $div;
   };
