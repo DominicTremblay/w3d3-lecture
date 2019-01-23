@@ -60,5 +60,10 @@ $(document).ready(function() {
       });
   };
 
+  $('#load-more').on('click', event => {
+    event.preventDefault();
+    loadArticles();
+  });
+
   loadArticles();
 }); // End Doc Ready
