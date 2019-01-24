@@ -49,3 +49,9 @@ The full list of the readyState values is documented at XMLHTTPRequest.readyStat
 [MDN Using XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 
 [Ajax Getting Started](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
+
+## To start the server
+
+1. clone the repo
+2. npm install
+3. node server.js
